@@ -1,10 +1,11 @@
-/* Reset de margens e paddings */
+/* Reseta o css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estiliza o body */
 body {
     font-family: Arial, sans-serif;
     background-color: #e3f3fd;
@@ -12,60 +13,78 @@ body {
     line-height: 1.6;
 }
 
-/* Header e menu */
+/* Estiliza o header */
 header {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #fff;
     padding: 15px 30px;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo img {
-    height: 40px;
-}
-
+/* Estiliza o menu */
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 20px; 
+    flex-grow: 1; /* Permite que o menu ocupe o espaço central */
+    margin: 0;
 }
 
+/* Estiliza o logo */
+#logo {
+    margin-right: auto; /* Empurra o logo para a esquerda */
+}
+
+/* Estiliza o logo */
+#logo img {
+    width: 40px;
+}
+
+/* Estiliza o login */
+#login {
+    margin-left: auto; /* Empurra o login para a direita */
+}
+
+/* Estiliza o menu */
 .menu li a {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
+/* Estiliza o menu */
 .menu li a:hover {
     color: #0056b3;
 }
 
+/* Estiliza o login */
 .login {
     background-color: #ff9f68;
     color: white;
     border: none;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
+/* Estiliza o login */
 .login:hover {
-    background-color: #ff7b3e;
+    background-color: #ff8c3a;
 }
 
-/* Container principal */
+/* Estiliza o container */
 .container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
 }
 
+/* Estiliza o h1 */
 h1 {
     text-align: center;
     color: #007bff;
@@ -73,84 +92,52 @@ h1 {
     font-size: 2.2em;
 }
 
-/* Layout de cada seção de FAQ */
+/* Estiliza o faq-section */
 .faq-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.faq-questions {
-    flex: 2;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
 }
 
-.faq-questions:hover {
-    transform: translateY(-5px);
+/* Estiliza o faq-questions */
+.faq-questions ul {
+    list-style: none;
 }
 
-.faq-item h2 {
-    font-size: 20px;
+/* Estiliza o faq-questions */
+.faq-questions ul li h2 {
+    margin-bottom: 10px;
     color: #007bff;
-    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.4s ease;
 }
 
-.faq-item p {
-    font-size: 16px;
-    margin-top: 5px;
+/* Estiliza o faq-questions */
+.faq-questions ul li .faq-item {
+    display: none;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.faq-item ul {
-    list-style: disc;
-    padding-left: 20px;
-    color: #333;
-}
-
-.faq-item ul li {
-    margin-bottom: 5px;
-}
-
-/* Estilo da imagem à direita */
-.faq-image {
-    flex: 1;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-image:hover {
-    transform: scale(1.05);
-}
-
-/* Rodapé */
+/* Estiliza o footer */
 footer {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
     border-top: 1px solid #ddd;
     text-align: center;
+    width: 100%;
     color: #777;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-}
-
+/* Estiliza o footer-menu */
 .footer-menu {
     list-style: none;
     display: flex;
@@ -159,12 +146,14 @@ footer {
     margin-top: 10px;
 }
 
+/* Estiliza o footer-menu */
 .footer-menu li a {
     text-decoration: none;
     color: #007bff;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
+/* Estiliza o footer-menu */
 .footer-menu li a:hover {
     color: #0056b3;
 }
