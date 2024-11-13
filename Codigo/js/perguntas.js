@@ -4,22 +4,24 @@ document.addEventListener("DOMContentLoaded", function() {
     faqTitles.forEach(function(title) {
         title.addEventListener("click", function() {
             const faqItem = this.nextElementSibling;
+            const parentLi = this.parentElement;
 
-            //Verifica se a resposta está visível
-            if (faqItem.style.display === "block") {
-                faqItem.style.display = "none"; // esconde
+            // Fecha outras perguntas abertas
+            document.querySelectorAll(".faq-questions li").forEach(function(li) {
+                if (li !== parentLi && li.classList.contains("active")) {
+                    li.classList.remove("active");
+                    li.querySelector(".faq-item").style.maxHeight = null;
+                }
+            });
+
+            // Alterna o estado ativo da pergunta atual
+            if (parentLi.classList.contains("active")) {
+                parentLi.classList.remove("active");
+                faqItem.style.maxHeight = null;
             } else {
-                // Esconde todas as outras respostas
-                document.querySelectorAll(".faq-item").forEach(function(item) {
-                    item.style.display = "none";
-                });
-
-                // Exibe a resposta clicada
-                faqItem.style.display = "block";
+                parentLi.classList.add("active");
+                faqItem.style.maxHeight = faqItem.scrollHeight + "px";
             }
-
         });
-
     });
-
 });

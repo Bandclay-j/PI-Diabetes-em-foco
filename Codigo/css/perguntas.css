@@ -1,19 +1,19 @@
-/* Reseta o css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estiliza o body */
-body {
+body, html {
     font-family: Arial, sans-serif;
     background-color: #e3f3fd;
     color: #333;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Estiliza o header */
 header {
     background-color: #fff;
     padding: 15px 30px;
@@ -21,33 +21,28 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza o menu */
 .menu {
     list-style-type: none;
     display: flex;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center; 
     align-items: center;
-    gap: 20px; 
-    flex-grow: 1; /* Permite que o menu ocupe o espaço central */
+    gap: 20px;
+    flex-grow: 1;
     margin: 0;
 }
 
-/* Estiliza o logo */
 #logo {
-    margin-right: auto; /* Empurra o logo para a esquerda */
+    margin-right: auto;
 }
 
-/* Estiliza o logo */
 #logo img {
     width: 40px;
 }
 
-/* Estiliza o login */
 #login {
-    margin-left: auto; /* Empurra o login para a direita */
+    margin-left: auto;
 }
 
-/* Estiliza o menu */
 .menu li a {
     text-decoration: none;
     color: #007bff;
@@ -55,12 +50,10 @@ header {
     transition: color 0.3s ease;
 }
 
-/* Estiliza o menu */
 .menu li a:hover {
     color: #0056b3;
 }
 
-/* Estiliza o login */
 .login {
     background-color: #ff9f68;
     color: white;
@@ -72,19 +65,17 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Estiliza o login */
 .login:hover {
     background-color: #ff8c3a;
 }
 
-/* Estiliza o container */
 .container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    flex: 1;
 }
 
-/* Estiliza o h1 */
 h1 {
     text-align: center;
     color: #007bff;
@@ -92,52 +83,70 @@ h1 {
     font-size: 2.2em;
 }
 
-/* Estiliza o faq-section */
 .faq-section {
-    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza o faq-questions */
 .faq-questions ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estiliza o faq-questions */
-.faq-questions ul li h2 {
-    margin-bottom: 10px;
-    color: #007bff;
+.faq-questions ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
     cursor: pointer;
-    position: relative;
-    transition: color 0.4s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* Estiliza o faq-questions */
-.faq-questions ul li .faq-item {
-    display: none;
-    padding: 10px 0;
+.faq-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.faq-title:hover {
+    color: #0056b3;
+}
+
+.faq-questions li .faq-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
     background-color: #f9f9f9;
     border-radius: 5px;
     margin-top: 10px;
 }
 
-/* Estiliza o footer */
+.faq-questions li.active .faq-item {
+    max-height: 1000px;
+    transition: max-height 0.5s ease;
+}
+
+.faq-questions ul li.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
 footer {
     background-color: #fff;
     padding: 20px;
     border-top: 1px solid #ddd;
     text-align: center;
-    width: 100%;
     color: #777;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
 }
 
-/* Estiliza o footer-menu */
 .footer-menu {
     list-style: none;
     display: flex;
@@ -146,19 +155,16 @@ footer {
     margin-top: 10px;
 }
 
-/* Estiliza o footer-menu */
 .footer-menu li a {
     text-decoration: none;
     color: #007bff;
     transition: color 0.3s ease;
 }
 
-/* Estiliza o footer-menu */
 .footer-menu li a:hover {
     color: #0056b3;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .faq-section {
         flex-direction: column;
