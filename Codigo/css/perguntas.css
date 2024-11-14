@@ -73,7 +73,9 @@ header {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -83,9 +85,62 @@ h1 {
     font-size: 2.2em;
 }
 
+/* Ajuste o layout para duas colunas */
+.content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Estilos do Carrossel */
+.carousel-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Estilos das Perguntas Frequentes */
 .faq-section {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1;
+    max-width: 50%;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
