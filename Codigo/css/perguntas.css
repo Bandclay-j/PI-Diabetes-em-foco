@@ -137,62 +137,6 @@ h1 {
     right: 10px;
 }
 
-#chat-container {
-    width: 350px;
-    max-width: 100%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-#chat-box {
-    height: 300px;
-    padding: 10px;
-    overflow-y: auto;
-    border-bottom: 1px solid #ddd;
-    flex-grow: 1;
-}
-
-#user-input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-top: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#send-button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-
-#send-button:hover {
-    background-color: #0056b3;
-}
-
-.message {
-    margin-bottom: 10px;
-}
-
-.message.user {
-    text-align: right;
-    color: #007bff;
-}
-
-.message.bot {
-    text-align: left;
-    color: #333;
-}
-
 /* Estilos das Perguntas Frequentes */
 .faq-section {
     flex: 1;

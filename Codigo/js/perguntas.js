@@ -4,74 +4,60 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevButton = document.querySelector(".carousel-button.prev");
     const nextButton = document.querySelector(".carousel-button.next");
     let currentIndex = 0;
+    let autoRotateInterval; // Armazena o intervalo de rotação automática
+    const rotateDelay = 3000; // Tempo de rotação automática em milissegundos (3 segundos)
 
+    // Função para mostrar uma imagem específica
     function showImage(index) {
         images.forEach(img => img.classList.remove("active"));
         images[index].classList.add("active");
     }
 
+    // Função para mostrar a imagem anterior
     function prevImage() {
         currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
         showImage(currentIndex);
     }
 
+    // Função para mostrar a próxima imagem
     function nextImage() {
         currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
         showImage(currentIndex);
     }
 
-    prevButton.addEventListener("click", prevImage);
-    nextButton.addEventListener("click", nextImage);
+    // Inicia a rotação automática
+    function startAutoRotate() {
+        stopAutoRotate(); // Evita múltiplos intervalos
+        autoRotateInterval = setInterval(nextImage, rotateDelay);
+    }
 
-    // Inicializar primeira imagem
+    // Para a rotação automática
+    function stopAutoRotate() {
+        clearInterval(autoRotateInterval);
+    }
+
+    // Adicionar ouvintes de evento
+    prevButton.addEventListener("click", () => {
+        prevImage();
+        startAutoRotate(); // Reinicia a rotação automática após interação
+    });
+
+    nextButton.addEventListener("click", () => {
+        nextImage();
+        startAutoRotate(); // Reinicia a rotação automática após interação
+    });
+
+    // Pausa e retoma a rotação ao interagir com as imagens
+    images.forEach(img => {
+        img.addEventListener("mouseenter", stopAutoRotate); // Pausa ao passar o mouse
+        img.addEventListener("mouseleave", startAutoRotate); // Retoma ao sair do mouse
+    });
+
+    // Inicializar a primeira imagem
     showImage(currentIndex);
 
-    // Inicializar o chatbot
-    document.getElementById('send-button').addEventListener('click', sendMessage);
-    document.getElementById('user-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
-    
-    async function sendMessage() {
-        const userInput = document.getElementById('user-input').value;
-        if (userInput.trim() === '') return;
-    
-        // Exibe a mensagem do usuário na tela
-        displayMessage(userInput, 'user');
-    
-        // Limpa o campo de entrada
-        document.getElementById('user-input').value = '';
-    
-        // Envia a mensagem para o back-end
-        const response = await getBotResponse(userInput);
-        
-        // Exibe a resposta do chatbot
-        displayMessage(response, 'bot');
-    }
-    
-    function displayMessage(message, sender) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', sender);
-        messageDiv.innerText = message;
-        
-        document.getElementById('chat-box').appendChild(messageDiv);
-        document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
-    }
-    
-    async function getBotResponse(userMessage) {
-        const response = await fetch('/chat', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ message: userMessage }),
-        });
-    
-        const data = await response.json();
-        return data.reply;
-    }
+    // Iniciar rotação automática ao carregar
+    startAutoRotate();
 
     // Perguntas Frequentes
     const faqTitles = document.querySelectorAll(".faq-title");
