@@ -27,69 +27,50 @@ document.addEventListener("DOMContentLoaded", function() {
     showImage(currentIndex);
 
     // Inicializar o chatbot
-    const chatbotToggle = document.querySelector(".chatbot-toggle");
-    const chatbot = document.querySelector(".chatbot");
-    const chatbotClose = document.querySelector(".chatbot-close");
-    const chatbotMessages = document.querySelector(".chatbot-messages");
-    const chatbotInput = document.querySelector("#chatbot-input");
-    const chatbotSend = document.querySelector("#chatbot-send");
-
-    // Exibir ou ocultar o chatbot
-    chatbotToggle.addEventListener("click", () => {
-        chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+    document.getElementById('send-button').addEventListener('click', sendMessage);
+    document.getElementById('user-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
     });
-
-    chatbotClose.addEventListener("click", () => {
-        chatbot.style.display = "none";
-    });
-
-    // Enviar mensagem
-    chatbotSend.addEventListener("click", sendMessage);
-    chatbotInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") sendMessage();
-    });
-
-    function sendMessage() {
-        const userInput = chatbotInput.value.trim();
-        if (!userInput) return;
-
-        // Exibir a mensagem do usuário
-        addMessage("user", userInput);
-
-        // Enviar para o backend (IA)
-        fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ message: userInput })
-        })
-        .then(response => response.json())
-        .then(data => {
-            const botReply = data.reply || "Desculpe, não entendi sua pergunta.";
-            addMessage("bot", botReply);
-        })
-        .catch(err => {
-            console.error("Erro ao comunicar com o servidor", err);
-            addMessage("bot", "Houve um erro. Tente novamente.");
-        });
-
-        chatbotInput.value = "";
+    
+    async function sendMessage() {
+        const userInput = document.getElementById('user-input').value;
+        if (userInput.trim() === '') return;
+    
+        // Exibe a mensagem do usuário na tela
+        displayMessage(userInput, 'user');
+    
+        // Limpa o campo de entrada
+        document.getElementById('user-input').value = '';
+    
+        // Envia a mensagem para o back-end
+        const response = await getBotResponse(userInput);
+        
+        // Exibe a resposta do chatbot
+        displayMessage(response, 'bot');
     }
-
-    function addMessage(sender, text) {
-        const message = document.createElement("div");
-        message.classList.add("message", `${sender}-message`);
-
-        const bubble = document.createElement("div");
-        bubble.classList.add("bubble");
-        bubble.textContent = text;
-
-        message.appendChild(bubble);
-        chatbotMessages.appendChild(message);
-
-        // Rolar para a mensagem mais recente
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    
+    function displayMessage(message, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', sender);
+        messageDiv.innerText = message;
+        
+        document.getElementById('chat-box').appendChild(messageDiv);
+        document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+    }
+    
+    async function getBotResponse(userMessage) {
+        const response = await fetch('/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: userMessage }),
+        });
+    
+        const data = await response.json();
+        return data.reply;
     }
 
     // Perguntas Frequentes

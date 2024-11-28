@@ -56,19 +56,12 @@
              </section>
 
             <!-- Chatbot Section -->
-            <div class="chatbot-container">
-                <button class="chatbot-toggle" aria-label="Abrir Chatbot">💬</button>
-                <div class="chatbot">
-                    <div class="chatbot-header">
-                        <span>Assistente Virtual</span>
-                        <button class="chatbot-close" aria-label="fechar chatbot">✖</button>
-                    </div>
-                    <div class="chatbot-messages"></div>
-                    <div class="chatbot-input">
-                        <input type="text" id="chatbot-input" placeholder="Digite sua pergunta...">
-                        <button id="chatbot-send" aria-label="Enviar mensagem">▶</button>
-                    </div>
+            <div id="chat-container">
+                <div id="chat-box">
+                    <!-- Mensagens do chat -->
                 </div>
+                <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+                <button id="send-button">Enviar</button>
             </div>
         
             <!-- Seção de Perguntas Frequentes -->
