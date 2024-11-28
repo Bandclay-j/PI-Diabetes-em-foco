@@ -46,22 +46,22 @@
              <section class="carousel-section">
                 <div class="carousel">
                     <div class="carousel-images">
-                        <img src="../img/diabetes1.png" alt="https://lastfm.freetls.fastly.net/i/u/ar0/57c6602c707e98414df2c922e9dc6773.jpg" class="active">
-                        <img src="../img/diabetes2.png" alt="https://dzhmao.ru/upload/iblock/c37/st240918_g.jpg">
-                        <img src="../img/diabetes3.png" alt="https://dzhmao.ru/upload/iblock/d21/1_89.jpg">
+                        <img src="../img/diabetes1.png" alt="https://lastfm.freetls.fastly.net/i/u/ar0/57c6602c707e98414df2c922e9dc6773.jpg" class="active" loading="lazy">
+                        <img src="../img/diabetes2.png" alt="https://dzhmao.ru/upload/iblock/c37/st240918_g.jpg" loading="lazy">
+                        <img src="../img/diabetes3.png" alt="https://dzhmao.ru/upload/iblock/d21/1_89.jpg" loading="lazy">
                     </div>
-                    <button class="carousel-button prev">❮</button>
-                    <button class="carousel-button next">❯</button>
+                    <button class="carousel-button prev" aria-label="Imagem anterior">❮</button>
+                    <button class="carousel-button next" aria-label="Proxima imagem">❯</button>
                 </div>
              </section>
 
             <!-- Chatbot Section -->
             <div id="chat-container">
-                <div id="chat-box">
+                <div id="chat-box" role="log" aria-live="polite">
                     <!-- Mensagens do chat -->
                 </div>
-                <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
-                <button id="send-button">Enviar</button>
+                <input type="text" id="user-input" placeholder="Digite sua mensagem..." aria-label="Digite sua pergunta"/>
+                <button id="send-button" aria-label="Enviar Mensagem">Enviar</button>
             </div>
         
             <!-- Seção de Perguntas Frequentes -->
@@ -69,14 +69,14 @@
                 <div class="faq-questions">
                     <ul>
                         <li>
-                            <h2 class="faq-title">1. O que é diabetes? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq1" role="button" aria-expanded="false">1. O que é diabetes? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Diabetes é uma doença crônica que ocorre quando o pâncreas não produz insulina suficiente ou quando o corpo não consegue utilizar eficazmente a insulina que produz.</p>
                             </div>
                         </li>
 
                         <li>
-                            <h2 class="faq-title">2. Quais são os tipos? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq2" role="button" aria-expanded="false">2. Quais são os tipos? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Os principais tipos de diabetes são:</p>
                                 <ul>
@@ -88,7 +88,7 @@
                         </li>
 
                         <li>
-                            <h2 class="faq-title">3. Quais são os principais sintomas? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq3"  role="button" aria-expanded="false">3. Quais são os principais sintomas? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Os sintomas mais comuns são:</p>
                                 <ul>
@@ -103,7 +103,7 @@
                         </li>
 
                         <li>
-                            <h2 class="faq-title">4. Como é feito o diagnóstico? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq4"  role="button" aria-expanded="false">4. Como é feito o diagnóstico? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>O diagnóstico da diabetes é feito por meio de exames de sangue que medem os níveis de glicose no sangue em jejum e após a ingestão de uma solução de glicose. Os valores de referência para diagnóstico da diabetes são:</p>
                                 <ul>
@@ -114,14 +114,14 @@
                         </li>
 
                         <li>
-                            <h2 class="faq-title">5. Como é feito o tratamento? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq5"  role="button" aria-expanded="false">5. Como é feito o tratamento? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>O tratamento da diabetes envolve a adoção de um estilo de vida saudável, que inclui uma alimentação equilibrada, a prática regular de exercícios físicos e o controle do peso. Além disso, o tratamento da diabetes pode incluir o uso de medicamentos higlicemiantes e insulina, conformew a orientação médica.</p>
                             </div>
                         </li>
 
                         <li>
-                            <h2 class="faq-title">6. Como previnir? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq6"  role="button" aria-expanded="false">6. Como previnir? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Para previnir a diabetes, é importante adotar hábitos saudáveis, como:</p>
                                 <ul>
@@ -135,7 +135,7 @@
                         </li>
 
                         <li>
-                            <h2 class="faq-title">7.Quais são as complicações? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq7"  role="button" aria-expanded="false">7.Quais são as complicações? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>As complicações da diabetes podem afetar diversos órgãos e sistemas do corpo, como:</p>
                                 <ul>
@@ -150,21 +150,21 @@
                         </li>
 
                         <li>
-                            <h2 class="faq-title">8. Como a dieta influencia no controle? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq8"  role="button" aria-expanded="false">8. Como a dieta influencia no controle? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Uma alimentação balanceada ajuda a controlar os níveis de açúcar no sangue, o que é essencial para o manejo da diabetes.</p>
                             </div>
                         </li>
 
                         <li>
-                            <h2 class="faq-title">9. Qual a importância dos exercícios físicos para pessoa com diabetes? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq9"  role="button" aria-expanded="false">9. Qual a importância dos exercícios físicos para pessoa com diabetes? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>Exercícios ajudam a melhorar a sensibilidade à insulina e controlar os níveis de glicose no sangue.</p>
                             </div>
                         </li>
 
                         <li>
-                            <h2 class="faq-title">10. Qual é o dia mundial da diabetes? <span class="arrow-icon">&#9660;</span></h2>
+                            <h2 class="faq-title" id="faq10"  role="button" aria-expanded="false">10. Qual é o dia mundial da diabetes? <span class="arrow-icon">&#9660;</span></h2>
                             <div class="faq-item">
                                 <p>O dia 14 de novembro é o dia Mundial da diabetes!!</p>
                             </div>
