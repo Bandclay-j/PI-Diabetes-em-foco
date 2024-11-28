@@ -182,7 +182,78 @@ h1 {
     color: white;
     padding: 10px;
     font-size: 1rem;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens do Chatbot */
+.chatbot-messages .message {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-messages .user-message {
+    justify-content: flex-end;
+}
+
+.chatbot-messages .user-message .bubble {
+    background-color: #007bff;
+    color: white;
+}
+
+.chatbot-messages .bot-message .bubble {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.bubble {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
 }
 
 /* Estilos das Perguntas Frequentes */
