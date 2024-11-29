@@ -137,6 +137,125 @@ h1 {
     right: 10px;
 }
 
+/* Estilos do Chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+    background-color: #0056b3;
+}
+
+.chatbot {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensagens do Chatbot */
+.chatbot-messages .message {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.chatbot-messages .user-message {
+    justify-content: flex-end;
+}
+
+.chatbot-messages .user-message .bubble {
+    background-color: #007bff;
+    color: white;
+}
+
+.chatbot-messages .bot-message .bubble {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.bubble {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
 /* Estilos das Perguntas Frequentes */
 .faq-section {
     flex: 1;
