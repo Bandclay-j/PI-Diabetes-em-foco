@@ -62,22 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     
     // Inicializar o chatbot
-    const chatbotToggle = document.querySelector(".chatbot-toggle");
     const chatbot = document.querySelector(".chatbot");
-    const chatbotClose = document.querySelector(".chatbot-close");
     const chatbotMessages = document.querySelector(".chatbot-messages");
     const chatbotInput = document.querySelector("#chatbot-input");
     const chatbotSend = document.querySelector("#chatbot-send");
-
-    // Exibir ou ocultar o chatbot
-    chatbotToggle.addEventListener("click", () => {
-        chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
-    });
-
-    chatbotClose.addEventListener("click", () => {
-        chatbot.style.display = "none";
-    });
-
+    
     // Enviar mensagem
     chatbotSend.addEventListener("click", sendMessage);
     chatbotInput.addEventListener("keypress", (e) => {
