@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Hind:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "ABeeZee", sans-serif;
 }
 
 body, html {
     font-family: Arial, sans-serif;
-    background-color: #a6dfff;
+    background: url(../img/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
