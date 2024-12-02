@@ -311,6 +311,12 @@ footer {
     color: #0056b3;
 }
 
+.footer-menu li a span img {
+    width: auto;
+    height: 30px;
+
+}
+
 @media (max-width: 768px) {
     .faq-section {
         flex-direction: column;
