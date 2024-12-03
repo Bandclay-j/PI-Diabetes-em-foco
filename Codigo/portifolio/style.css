@@ -393,6 +393,10 @@ body.dark-mode #servicos {
     color: black;
 }
 
+body.dark-mode #servicos h3 {
+    color: white;
+}
+
 body.dark-mode #servicos th {
     background-color: #0c640f;
     color: black;
