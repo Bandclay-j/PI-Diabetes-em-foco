@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Pessoal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <h1>Talisson Pontes Rodrigues</h1>
+        <h2>Desenvolvedor de Sistemas</h2>
+        <div class="robo">
+            <button id="botao" onclick="ativarModo()">
+                <img src="./img/half-moon.png" alt="Icone da Lua">
+            </button>
+        </div>
+
+        <ul>
+            <li><a href="#sobreMim">Sobre Mim</a></li>
+            <li><a href="#projeto">Projeto</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="sobreMim" class="animate__animated animate__fadeInUp">
+            <h3>Sobre Mim</h3>
+            <div class="sobre-mim-container">
+                <img src="./img/imagem-pessoal.jpg" alt="Foto pessoal">
+                <p>
+                    Olá, meu nome é Talisson Pontes Rodrigues, tenho 18 anos e atualmente estou cursando o Técnico em Desenvolvimento de Sistemas no SENAC durante a manhã, e à tarde, o curso de Programador de Sistemas. Sou apaixonado por tecnologia e meu objetivo é me especializar como desenvolvedor de sistemas, contribuindo para o sucesso de uma empresa de tecnologia.
+                </p>
+                <br>
+                <p>
+                    Durante o curso Técnico, tenho adquirido conhecimentos valiosos, como:
+                    <ul>
+                        <li>Documentação de projetos</li>
+                        <li>HTML e CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>Banco de Dados (MySQL)</li>
+                        <li>Visual Studio Code (VsCode)</li>
+                        <li>NetBeans IDE 19</li>
+                        <li>MySQL Workbench 8</li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    No curso de Programador de Sistemas, estou aprimorando minhas habilidades, principalmente em:
+                    <ul>
+                        <li>Documentação</li>
+                        <li>HTML e CSS</li>
+                        <li>Visual Studio Code (VsCode)</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="projeto" class="animate__animated animate__fadeInUp">
+            <h3>Projeto</h3>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <div class="carousel">
+                        <input type="radio" name="carousel1" id="slide1-1" checked>
+                        <input type="radio" name="carousel1" id="slide1-2">
+                        <input type="radio" name="carousel1" id="slide1-3">
+                        <input type="radio" name="carousel1" id="slide1-4">
+                        <input type="radio" name="carousel1" id="slide1-5">
+                        <input type="radio" name="carousel1" id="slide1-6">
+                        <input type="radio" name="carousel1" id="slide1-7">
+                        <input type="radio" name="carousel1" id="slide1-8">
+                        <input type="radio" name="carousel1" id="slide1-9">
+                        <input type="radio" name="carousel1" id="slide1-10">
+                        <input type="radio" name="carousel1" id="slide1-11">
+                        <input type="radio" name="carousel1" id="slide1-12">
+                        <input type="radio" name="carousel1" id="slide1-13">
+                        <input type="radio" name="carousel1" id="slide1-14">
+                        <input type="radio" name="carousel1" id="slide1-15">
+                        <input type="radio" name="carousel1" id="slide1-16">
+                        <div class="carousel-images">
+                            <div class="carousel-image" id="img1-1" onclick="openModal('./img/carrossel-telemedicina/imagem-inicio.png', 'Início do Sistema')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-inicio.png" alt="Início do Sistema">
+                                    <figcaption>Início do Sistema</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-2" onclick="openModal('./img/carrossel-telemedicina/imagem-cadastroMedico1.png', 'Cadastro do médico parte 1')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-cadastroMedico1.png" alt="Cadastro do médico parte 1">
+                                    <figcaption>Cadastro do médico parte 1</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-3" onclick="openModal('./img/carrossel-telemedicina/imagem-cadastroMedico2.png', 'Cadastro do médico parte 2')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-cadastroMedico2.png" alt="Cadastro do médico parte 2">
+                                    <figcaption>Cadastro do médico parte 2</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-4" onclick="openModal('./img/carrossel-telemedicina/imagem-cadastroPaciente.png', 'Cadastro do paciente')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-cadastroPaciente.png" alt="Cadastro do paciente">
+                                    <figcaption>Cadastro do paciente</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-5" onclick="openModal('./img/carrossel-telemedicina/imagem-login.png', 'Login')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-login.png" alt="Login">
+                                    <figcaption>Login</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-6" onclick="openModal('./img/carrossel-telemedicina/imagem-telaPrincipal-paciente.png', 'Tela Principal do paciente')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-telaPrincipal-paciente.png" alt="Tela Principal do paciente">
+                                    <figcaption>Tela Principal do paciente</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-7" onclick="openModal('./img/carrossel-telemedicina/imagem-telaPrincipal-paciente-noturno.png', 'Tela Principal do paciente ')">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-telaPrincipal-paciente-noturno.png" alt="Tela Principal do paciente no modo noturno">
+                                    <figcaption>Tela Principal do paciente no modo noturno</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-8">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-telaPrincipal-medico.png" alt="Tela principal do médico">
+                                    <figcaption>Tela principal do médico</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-9">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-novaConsulta1.png" alt="Nova consulta parte 1">
+                                    <figcaption>Nova consulta parte 1</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-10">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-novaConsulta2.png" alt="Nova consulta parte 2">
+                                    <figcaption>Nova consulta parte 2</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-11">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-historicoConsulta.png" alt="Histórico de consultas">
+                                    <figcaption>Histórico de consultas</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-12">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-novoExame.png" alt="Novo exame">
+                                    <figcaption>Novo exame (Disponível somente para o Médico)</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-13">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-historicoExame.png" alt="Histórico de exames">
+                                    <figcaption>Histórico de exames</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-14">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-novaPrescricao.png" alt="Nova prescrição">
+                                    <figcaption>Nova prescrição (Disponível somente para o Médico)</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-15">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-historicoPrescricao.png" alt="Histórico de Prescrição">
+                                    <figcaption>Histórico de Prescrição</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-image" id="img1-16">
+                                <figure>
+                                    <img src="./img/carrossel-telemedicina/imagem-historicoPagamento.png" alt="Histórico de pagamentos">
+                                    <figcaption>Histórico de pagamentos (Disponível somente para o Paciente)</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="slide1-1"></label>
+                            <label for="slide1-2"></label>
+                            <label for="slide1-3"></label>
+                            <label for="slide1-4"></label>
+                            <label for="slide1-5"></label>
+                            <label for="slide1-6"></label>
+                            <label for="slide1-7"></label>
+                            <label for="slide1-8"></label>
+                            <label for="slide1-9"></label>
+                            <label for="slide1-10"></label>
+                            <label for="slide1-11"></label>
+                            <label for="slide1-12"></label>
+                            <label for="slide1-13"></label>
+                            <label for="slide1-14"></label>
+                            <label for="slide1-15"></label>
+                            <label for="slide1-16"></label>
+                        </div>
+                    </div>
+                    <h4>Projeto sobre Telemedicina</h4>
+                    <p>Este projeto é o Projeto Integrador do curso Técnico em Desenvolvimento de Sistemas no SENAC, desenvolvido no ano de 2024. Ele tem como objetivo criar uma aplicação de telemedicina que facilita o agendamento de consultas, pagamento e monitoramento de dados clínicos de pacientes.</p>
+                    <p><a href="https://github.com/Talisson-Rodrigues/projeto_integrador_telemedicina" target="_blank" class="links">Github <i class="fab fa-github"></i></a></p>
+                </div>
+                <div class="gallery-item">
+                    <div class="carousel">
+                        <input type="radio" name="carousel2" id="slide2-1" checked>
+                        <input type="radio" name="carousel2" id="slide2-2">
+                        <input type="radio" name="carousel2" id="slide2-3">
+                        <input type="radio" name="carousel2" id="slide2-4">
+                        <input type="radio" name="carousel2" id="slide2-5">
+                        <input type="radio" name="carousel2" id="slide2-6">
+                        <input type="radio" name="carousel2" id="slide2-7">
+                        <div class="carousel-images">
+                            <div class="carousel-image" id="img2-1">
+                                <figure>
+                                    <img src="./img/carrossel-Site/sobre-IA.png" alt="Sobre a IA">
+                                    <figcaption>Parte do site qual fala sobre IA</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-2">
+                                <figure>
+                                    <img src="./img/carrossel-Site/subcampos-IA.png" alt="Subcampos da IA">
+                                    <figcaption>Os principais subcampos da IA</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-3">
+                                <figure>
+                                    <img src="./img/carrossel-Site/imagens-IA.png" alt="Imagens geradas por IA">
+                                    <figcaption>Imagens geradas por IA</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-4">
+                                <figure>
+                                    <img src="./img/carrossel-Site/aplicacoes-IA.png" alt="Áreas que a IA está ajudando">
+                                    <figcaption>Áreas que a IA está ajudando</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-5">
+                                <figure>
+                                    <img src="./img/carrossel-Site/vantagens-IA.png" alt="Vantagens da IA">
+                                    <figcaption>Vantagens da IA</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-6">
+                                <figure>
+                                    <img src="./img/carrossel-Site/desafios-IA.png" alt="Desafios da IA">
+                                    <figcaption>Desafios da IA</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-image" id="img2-7">
+                                <figure>
+                                    <img src="./img/carrossel-Site/contatos-IA.png" alt="Área de contato da IA">
+                                    <figcaption>Área de contato da IA</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="slide2-1"></label>
+                            <label for="slide2-2"></label>
+                            <label for="slide2-3"></label>
+                            <label for="slide2-4"></label>
+                            <label for="slide2-5"></label>
+                            <label for="slide2-6"></label>
+                            <label for="slide2-7"></label>
+                        </div>
+                    </div>
+                    <h4>Site - IA</h4>
+                    <p>Este site tem como objetivo fornecer uma visão abrangente sobre a Inteligência Artificial (IA), discutindo suas aplicações, vantagens, desafios e o impacto em nossa sociedade. Ele também destaca as pessoas e os profissionais que estão liderando as inovações na área.</p>
+                    <p><a href="https://github.com/Bandclay-j/Site-IA" target="_blank" class="links">Github <i class="fab fa-github"></i></a></p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="carousel">
+                        <input type="radio" name="carousel3" id="slide3-1" checked>
+                        <div class="carousel-images">
+                            <div class="carousel-image">
+                                <figure>
+                                    <img src="./img/carrossel-Diabetes/pi-diabetes.png" alt="Repositorio do projeto">
+                                    <figcaption>Em produção</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="slide3-1"></label>
+                        </div>
+                    </div>
+                    <h4>PI - Programador de Sistemas - Site sobre diabetes</h4>
+                    <p>Um site informativo e com algumas ferramentas úteis para pessoas com diabetes ou pessoas que querem se informar sobre a doença</p>
+                    <p><a href="https://github.com/Bandclay-j/PI-PROGRAMADOR-DE-SISTEMAS" target="_blank" class="links">Github <i class="fab fa-github"></i></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="animate__animated animate__fadeInUp">
+            <h3>Serviços</h3>
+            <fieldset>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serviço</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desenvolvimento Front-End</td>
+                            <td>Criação de sites responsivos e interativos utilizando HTML, CSS, e JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td>Desenvolvimento Back-End</td>
+                            <td>Implementação de lógica de servidor e integração com banco de dados (MySQL)</td>
+                        </tr>
+                        <tr>
+                            <td>Banco de Dados</td>
+                            <td>Modelagem, criação e manutenção de bancos de dados (MySQL)</td>
+                        </tr>
+                        <tr>
+                            <td>Desenvolvimento em Java</td>
+                            <td>Construção de aplicações robustas e sistemas em Java</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </section>
+        
+
+        <section id="contato" class="animate__animated animate__fadeInUp">
+            <h3>Contato</h3>
+            <form action="submit.php">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h4>Redes sociais</h4>
+        <ul>
+            <li>
+                <a href="https://github.com/Bandclay-j" target="_blank"><i class="fab fa-github"></i> Github</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/talisson-pontes-rodrigues-93a606230/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/bandclay_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+        </ul>
+        <p>Desenvolvido por Talisson Pontes Rodrigues</p>
+        <p>&copy; 2024 - Portifólio pessoal. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
